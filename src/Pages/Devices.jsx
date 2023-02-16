@@ -10,6 +10,7 @@ import { AiFillEdit } from "react-icons/ai";
 import Badge from "react-bootstrap/Badge";
 import TopNavbar from "../components/TopNavbar";
 
+///////////////////////Getting data of Devices
 const Devices = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();

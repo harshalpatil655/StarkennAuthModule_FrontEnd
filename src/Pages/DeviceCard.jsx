@@ -7,6 +7,7 @@ import { FcMultipleDevices } from "react-icons/fc";
 import { useDispatch } from "react-redux";
 import { getById } from "../Redux/AppReducer/action";
 
+//////Displaying the data of particular device in card
 const DeviceCard = () => {
   const dispatch = useDispatch();
   const [idData, setIdData] = useState(["starkenn"]);

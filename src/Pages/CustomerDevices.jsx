@@ -2,10 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Badge, Container } from "react-bootstrap";
 import Table from "react-bootstrap/Table";
-import { AiFillEdit } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import TopNavbar from "../components/TopNavbar";
 
+///////getting devices Data
 const CustomerDevices = () => {
   const [devicesData, setDevicesData] = useState([]);
   const user_id = localStorage.getItem("user_id");
@@ -19,7 +19,7 @@ const CustomerDevices = () => {
       .then((res) => setDevicesData(res.data.idData))
       .catch((err) => console.log(err));
   };
-  console.log(devicesData);
+
   useEffect(() => {
     getDevicesData();
   }, []);

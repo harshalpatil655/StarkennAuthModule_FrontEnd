@@ -7,11 +7,13 @@ import { getByIdVehicle } from "../Redux/AppReducer/action";
 import Button from "react-bootstrap/Button";
 import styles from "../CSS/Vehiclecard.module.css";
 
+///////////////Displaying the Data of that particular vehicle in card format
 const Vehiclecard = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [idData, setIdData] = useState(["starkenn"]);
 
+  ////////Getting the vehicle data using the id got from params
   useEffect(() => {
     dispatch(getByIdVehicle(id))
       .then((res) => setIdData(res.payload.data.IdData))

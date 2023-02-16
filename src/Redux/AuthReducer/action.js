@@ -2,13 +2,13 @@ import {
   LOGIN_FAILURE,
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
-  LOGOUT_SUCCESS,
   SIGNUP_FAILURE,
   SIGNUP_REQUEST,
   SIGNUP_SUCCESS,
 } from "./actionTypes";
 import axios from "axios";
 
+//////////////////Adding Data Of User/////////////////////
 export const signup = (data) => (dispatch) => {
   dispatch({ type: SIGNUP_REQUEST });
 
@@ -18,6 +18,7 @@ export const signup = (data) => (dispatch) => {
     .catch((err) => dispatch({ type: SIGNUP_FAILURE }));
 };
 
+////////////////////////Login for Admin/Customer /////////////////////
 export const login = (data) => (dispatch) => {
   dispatch({ type: LOGIN_REQUEST });
 
@@ -30,8 +31,4 @@ export const login = (data) => (dispatch) => {
     .catch((err) => {
       return dispatch({ type: LOGIN_FAILURE });
     });
-};
-
-export const logout = () => (dispatch) => {
-  dispatch({ type: LOGOUT_SUCCESS });
 };

@@ -13,11 +13,13 @@ const AddCustomer = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  //////Function to set Data to state on input
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
   };
 
+  /////Onsubmit function
   const handleSubmit = (e) => {
     e.preventDefault();
 

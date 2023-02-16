@@ -1,6 +1,5 @@
 import TopNavbar from "../components/TopNavbar";
 import {
-  BsPersonFill,
   BsFillCpuFill,
   BsRecycle,
   BsFillCheckSquareFill,
@@ -12,6 +11,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+/////Customer Dashboard
 const CustomerDashboard = () => {
   let user_id = localStorage.getItem("user_id");
   let token = localStorage.getItem("token");

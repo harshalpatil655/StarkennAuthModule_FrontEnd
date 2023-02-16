@@ -14,6 +14,7 @@ import {
   getmastercustomerById,
 } from "../Redux/AppReducer/action";
 
+///////////////////////Editing the customer Details Also adding or editing the master_customer details
 const EditCustomer = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

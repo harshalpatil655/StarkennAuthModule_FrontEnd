@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 
+//////////////////////This is the Landing Page of site before yoy login
 const HomePage = () => {
   const navigate = useNavigate();
 

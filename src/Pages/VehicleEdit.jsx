@@ -13,6 +13,7 @@ import Button from "react-bootstrap/Button";
 import styles from "../CSS/VehicleEdit.module.css";
 import { Container } from "react-bootstrap";
 
+/////////Editing the details of vehicle
 const VehicleEdit = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -36,11 +37,13 @@ const VehicleEdit = () => {
       });
   };
 
+  //////On Input setting data to the state
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
   };
 
+  ////////Getting the old data of that particular vehicle and displaying it in form
   useEffect(() => {
     dispatch(getByIdVehicle(id))
       .then((res) => setIdData(res.payload.data.IdData))

@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { getById, updateDevice } from "../Redux/AppReducer/action";
 import styles from "../CSS/UpdateDevice.module.css";
 
+/////////Updating the devices ///////////////
 const UpdateDevice = () => {
   const dispatch = useDispatch();
   const { id } = useParams();

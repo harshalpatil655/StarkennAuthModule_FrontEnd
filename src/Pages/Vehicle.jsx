@@ -10,6 +10,7 @@ import { AiFillEdit } from "react-icons/ai";
 import Badge from "react-bootstrap/Badge";
 import TopNavbar from "../components/TopNavbar";
 
+/////////Getting data of vehicles assign to particular customer
 const Vehicle = () => {
   const dispatch = useDispatch();
   const [vehicleData, setVehicleData] = useState([]);

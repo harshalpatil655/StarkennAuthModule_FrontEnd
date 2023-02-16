@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { getCustomerId } from "../Redux/AppReducer/action";
 import styles from "../CSS/Customercard.module.css";
 
+/////////////Displaying customer card
 const CustomerCard = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
