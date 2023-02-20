@@ -1,12 +1,4 @@
-import {
-  LOGIN_FAILURE,
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
-  LOGOUT_SUCCESS,
-  SIGNUP_FAILURE,
-  SIGNUP_REQUEST,
-  SIGNUP_SUCCESS,
-} from "./actionTypes";
+import * as types from "./actionTypes";
 
 const initialState = {
   isLoading: false,
@@ -22,32 +14,32 @@ export const reducer = (state = initialState, action) => {
   let { type, payload } = action;
 
   switch (type) {
-    case SIGNUP_REQUEST: {
+    case types.SIGNUP_REQUEST: {
       return {
         ...state,
         isLoading: true,
       };
     }
 
-    case SIGNUP_SUCCESS: {
+    case types.SIGNUP_SUCCESS: {
       return {
         ...state,
         isLoading: false,
       };
     }
-    case SIGNUP_FAILURE: {
+    case types.SIGNUP_FAILURE: {
       return {
         ...state,
         isError: true,
       };
     }
-    case LOGIN_REQUEST: {
+    case types.LOGIN_REQUEST: {
       return {
         ...state,
         isLoading: true,
       };
     }
-    case LOGIN_SUCCESS: {
+    case types.LOGIN_SUCCESS: {
       localStorage.setItem("token", payload.token);
       localStorage.setItem("user_type", payload.user_type);
       localStorage.setItem("user_id", payload.user_id);
@@ -62,18 +54,13 @@ export const reducer = (state = initialState, action) => {
       };
     }
 
-    case LOGIN_FAILURE: {
+    case types.LOGIN_FAILURE: {
       return {
         ...state,
         isError: true,
       };
     }
-    case LOGOUT_SUCCESS: {
-      return {
-        ...state,
-        isLogin: false,
-      };
-    }
+
     default: {
       return state;
     }
